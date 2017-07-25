@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="vueApp">
+        
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    <!-- load css  -->
+    <link rel="stylesheet" href="{{ asset('build/style.css') }}"/>
+    <!-- preload JS -->
+    <link rel="preload" href="{{ asset("/build/vendor.js") }}" as="script"/>
+    <link rel="preload" href="{{ asset("/build/vue.js") }}" as="script"/>
+    <link rel="preload" href="{{ asset("/build/sw.js") }}" as="script"/>
+{% endblock %}
+
+
+{% block javascripts %}
+    <script type='text/javascript' src='{{ asset("/build/vendor.js") }}'></script>
+    <script type='text/javascript' src='{{ asset("/build/vue.js") }}'></script>
+    <script type='text/javascript' src='{{ asset("/build/sw.js") }}'></script>
+{% endblock javascripts%}

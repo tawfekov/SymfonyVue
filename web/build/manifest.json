@@ -1,0 +1,25 @@
+{
+  "short_name": "SymfonyVue",
+  "name": "SymfonyVue",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/build/images/256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/build/images/512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "background_color": "#FAFAFA",
+  "theme_color": "#e10b0b",
+  "display": "standalone",
+  "orientation": "portrait",
+  "/web/build/style.css": "/web/build/style.css",
+  "/web/build/sw.js": "/web/build/sw.js",
+  "/web/build/vendor.js": "/web/build/vendor.js",
+  "/web/build/vue.js": "/web/build/vue.js"
+}
