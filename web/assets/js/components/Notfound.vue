@@ -1,4 +1,4 @@
-<<template>
+<template>
   <section class="hero is-danger">
     <div class="hero-body">
       <div class="container">

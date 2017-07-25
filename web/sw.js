@@ -22,7 +22,7 @@ var __wpo = {
   "navigateFallbackForRedirects": true,
   "strategy": "changed",
   "responseStrategy": "cache-first",
-  "version": "7/25/2017, 10:42:52 AM",
+  "version": "7/25/2017, 4:20:57 PM",
   "name": "webpack-offline:SymfonyVue",
   "pluginVersion": "4.8.3",
   "relativePaths": false

@@ -1,4 +1,4 @@
-<<template>
+<template>
   <div id="app">
     <div id="container">
       <div id="welcome">
