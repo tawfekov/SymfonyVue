@@ -4,9 +4,9 @@
 parameters:
     database_host: 127.0.0.1
     database_port: ~
-    database_name: symfony
+    database_name: notifications
     database_user: root
-    database_password: ~
+    database_password: root
     # You should uncomment this if you want to use pdo_sqlite
     #database_path: '%kernel.project_dir%/var/data/data.sqlite'
 
@@ -17,3 +17,8 @@ parameters:
 
     # A secret key that's used to generate certain security-related tokens
     secret: ThisTokenIsNotSoSecretChangeIt
+    webpush.domain: http://elastic.live/
+    webpush.gcm: 314804067424
+    webpush.publicKey: BF2bGmBZuhVIBofX58XY4COHAVrIWnGMqOXOaAJMHylBgLsXjvRnYd4I-vtmoHnjQk8PfDD_LalMXSnt9xgJzQg
+    webpush.privateKey: lsFwvYdDZ_LtpZvTWYuKhwCLDvxNs5InAfldbbA8IGE
+    webpush.pem: %kernel.root_dir%/config/keys/private_key.pem

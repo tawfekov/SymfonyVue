@@ -1,3 +1,9 @@
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
+
+#spa:
+#    path:  /{path}
+#    defaults: { _controller: AppBundle:Default:index, path: '' }
+#    requirements:
+#        path: .*

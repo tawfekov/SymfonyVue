@@ -67,3 +67,17 @@ swiftmailer:
     username: '%mailer_user%'
     password: '%mailer_password%'
     spool: { type: memory }
+
+minishlink_web_push:
+  api_keys:                       # you should put api keys in your "app/config/parameters.yml" file
+    GCM: '%webpush.gcm%'
+  VAPID:
+    subject: '%webpush.subject%'                 # can be an URL or a mailto:
+    publicKey: '%webpush.publicKey%'            # uncompressed public key P-256 encoded in Base64-URL
+    privateKey: '%webpush.privateKey%'          # the secret multiplier of the private key encoded in Base64-URL
+    pemFile: '%webpush.pem%'                    # if you have a PEM file and want to hardcode its content
+  ttl: 2419200                                  # Time to Live of notifications in seconds
+  urgency: ~                                    # can be very-low / low / normal / high
+  topic: ~                                      # default identifier for your notifications
+  timeout: 30                                   # Timeout of each request in seconds
+  automatic_padding: true                       # pad messages automatically for better security (against more bandwith usage)

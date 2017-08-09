@@ -8,9 +8,8 @@ import Hello from '../components/Hello'
 import Notfound from '../components/Notfound'
 import Demo from '../components/Demo'
 
-
 export default new Router({
-  //mode: 'history',
+  mode: 'history',
   routes: [
     {
       path: '/',

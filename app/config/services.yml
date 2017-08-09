@@ -33,3 +33,8 @@ services:
     # AppBundle\Service\ExampleService:
     #     arguments:
     #         $someArgument: 'some_value'
+    # event listener to redirect all 404 requests to our SPA page
+    #app.spa_listener:
+    #        class: AppBundle\EventListener\SPA
+    #        tags:
+    #            - { name: kernel.event_listener, event: kernel.exception, method: onKernelException }

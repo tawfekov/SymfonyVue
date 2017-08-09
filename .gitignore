@@ -16,3 +16,4 @@
 /vendor/
 /web/bundles/
 /node_modules/*
+./app/config/keys/*

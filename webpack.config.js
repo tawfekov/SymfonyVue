@@ -5,6 +5,8 @@ var OfflinePlugin = require('offline-plugin');
 // manifest plugin
 var ManifestPlugin = require('webpack-manifest-plugin');
 
+var commonChunk = require("webpack/lib/optimize/CommonsChunkPlugin");
+
 Encore
     // directory where all compiled assets will be stored
     .setOutputPath('web/build/')
@@ -28,6 +30,10 @@ Encore
 
 // fetch webpack config, then modify it!
 var config = Encore.getWebpackConfig();
+config.plugins.push(new commonChunk({
+    name: 'chunck',
+    async: true
+}));
 config.plugins.push(new ManifestPlugin({
     fileName: 'manifest.json',
     basePath: '/web/build/',
@@ -49,7 +55,8 @@ config.plugins.push(new ManifestPlugin({
         "background_color": "#FAFAFA",
         "theme_color": "#e10b0b",
         "display": "standalone",
-        "orientation": "portrait"
+        "orientation": "portrait",
+        "gcm_sender_id": "314804067424"
     }
 }));
 // push offline-plugin it must be the last one to use 
@@ -71,7 +78,7 @@ config.plugins.push(new OfflinePlugin({
         "events": !Encore.isProduction(),
         "entry": "./web/assets/js/sw.js",
         "cacheName": "SymfonyVue",
-        "navigateFallbackURL": '/../',
+        "navigateFallbackURL": '/',
         "minify": !Encore.isProduction(),
         "output": "./../sw.js",
         "scope": "/"

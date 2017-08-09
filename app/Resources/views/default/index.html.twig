@@ -20,4 +20,8 @@
     <script type='text/javascript' src='{{ asset("/build/vendor.js") }}'></script>
     <script type='text/javascript' src='{{ asset("/build/vue.js") }}'></script>
     <script type='text/javascript' src='{{ asset("/build/sw.js") }}'></script>
+    <script type='text/javascript'>
+        window.vapidPublicKey = '{{ vapidPublicKey }}';
+    </script>
+
 {% endblock javascripts%}
