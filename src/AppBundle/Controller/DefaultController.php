@@ -13,8 +13,8 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/{route}", name="homepage")
-     * @Route("/", name="vue_subpages", requirements={"route"="*+"})
+     * @Route("/", name="homepage")
+     * @Route("/{route}", name="vue_sub_pages", requirements={"route"=".+"})
      */
     public function indexAction(Request $request)
     {
