@@ -73,8 +73,8 @@ minishlink_web_push:
     GCM: '%webpush.gcm%'
   VAPID:
     subject: '%webpush.subject%'                 # can be an URL or a mailto:
-    publicKey: '%webpush.publicKey%'            # uncompressed public key P-256 encoded in Base64-URL
-    privateKey: '%webpush.privateKey%'          # the secret multiplier of the private key encoded in Base64-URL
+    publicKey: '%webpush.publickey%'            # uncompressed public key P-256 encoded in Base64-URL
+    privateKey: '%webpush.privatekey%'          # the secret multiplier of the private key encoded in Base64-URL
     pemFile: '%webpush.pem%'                    # if you have a PEM file and want to hardcode its content
   ttl: 2419200                                  # Time to Live of notifications in seconds
   urgency: ~                                    # can be very-low / low / normal / high
